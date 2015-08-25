@@ -1,0 +1,31 @@
+@import "compass/reset";
+@import "compass/support";
+@import "compass/css3";
+
+$fontColor:#7c8081;
+$wrapMargin:10%;
+$wrapMarginT:100px;
+body{
+	color:$fontColor;
+}
+a{
+	text-decoration: none;
+}
+@include keyframes(textYd2) {
+ 0%   {transform:translate(260px);opacity:0;}
+ 100% {transform:translate(0);opacity:1;}
+}
+@include keyframes(textYd) {
+ 0%   {transform:translate(-260px);opacity:0;}
+ 100% {transform:translate(0);opacity:1;}
+}
+@include keyframes(textYd3) {
+ 0%   {transform:translate(0,200px) rotateY(0);opacity:0;margin-left:300px;}
+ 100% {transform:translate(0,0) rotateY(720deg);opacity:1;margin-left:0;}
+}
+
+
+
+@media only screen and (max-width: 769px){
+	body{background:red}
+}
