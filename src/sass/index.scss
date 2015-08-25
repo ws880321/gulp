@@ -104,15 +104,25 @@ body{
 	 		.blogArticle{
 	 			width: 40%;
 	 			margin: 0 25px;
-	 			height: 200px;
 	 			@include border-radius(5px);	
 	 			display: inline-block; /* non-flexbox browsers */
-	    		@include display-flex(inline-flex);
-	    		@include align-items(center);
-	    		@include justify-content(center);
-	    		background:#f90;
-	    		@include flex(1 0);
-	    		@include box-shadow(5px 5px 10px 3px #eee);	
+	    		@include flex(1 0);	
+	    		.articleHeaderPic{
+	    			display: block;
+	    			width: 100%;
+	    			img{
+	    				@include border-radius(10px);
+	    				@include box-shadow(0px 5px 5px #fefefe);
+	    				&:hover{
+		    				@include animation(shake 0.9s  ease);
+	    				}
+	    			}
+	    		}
+	    		h3{
+	    			display: block;
+	    			width: 100%;
+	    			font-size: 16px;
+	    		}
 	 		}
 		}
 	}

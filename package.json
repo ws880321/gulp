@@ -23,6 +23,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^1.2.0",
     "gulp-sass": "^2.0.4",
+    "gulp-seajs-combo": "^1.2.3",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
     "tiny-lr": "^0.1.6"

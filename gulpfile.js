@@ -39,16 +39,17 @@ gulp.task('styles', function() {
 //     .pipe(notify({ message: 'Styles task complete' }));
 // });
  
-// 脚本
+
+seajsCombo = require( 'gulp-seajs-combo' );
+
 gulp.task('scripts', function() { 
-  return gulp.src('src/js/**/*.js')
-    .pipe(jshint('.jshintrc'))
+  return gulp.src('src/javascript/**/index.js')
+    .pipe( seajsCombo() )
     .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('dist/scripts'))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/scripts'))
+    // .pipe(gulp.dest('dist/scripts'))
+    // .pipe(uglify())
+    .pipe(gulp.dest('src/javascript/index'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
  
