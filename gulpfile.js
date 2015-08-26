@@ -43,13 +43,13 @@ gulp.task('styles', function() {
 seajsCombo = require( 'gulp-seajs-combo' );
 
 gulp.task('scripts', function() { 
-  return gulp.src('src/javascript/**/index.js')
+  return gulp.src('src/javascript/test/test.js')
     .pipe( seajsCombo() )
     .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
     // .pipe(gulp.dest('dist/scripts'))
     // .pipe(uglify())
-    .pipe(gulp.dest('src/javascript/index'))
+    .pipe(gulp.dest('src/dist'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
  
